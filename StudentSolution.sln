@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentLibrary", "StudentLi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentApp", "StudentApp\StudentApp.csproj", "{BF2AF282-1485-4F79-9D6F-BED326E48AA0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentLibrary.Tests", "StudentLibrary.Tests\StudentLibrary.Tests.csproj", "{2046F303-8F87-4AD8-899C-CAB817B4103E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{BF2AF282-1485-4F79-9D6F-BED326E48AA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BF2AF282-1485-4F79-9D6F-BED326E48AA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BF2AF282-1485-4F79-9D6F-BED326E48AA0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2046F303-8F87-4AD8-899C-CAB817B4103E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2046F303-8F87-4AD8-899C-CAB817B4103E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2046F303-8F87-4AD8-899C-CAB817B4103E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2046F303-8F87-4AD8-899C-CAB817B4103E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
