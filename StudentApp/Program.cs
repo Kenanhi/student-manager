@@ -35,10 +35,26 @@ class Program
                     }
                     break;
                 case "2":
-                    System.Console.WriteLine("Add a student name and grade: ");
-                    string name = Console.ReadLine();
-                    int grade = int.Parse(Console.ReadLine());
-                    students.Add(new Student(name, grade));
+                    System.Console.WriteLine("Add a student name: ");
+                    string? name = Console.ReadLine();
+                    System.Console.WriteLine("Add grade(0-100): ");
+                    string? gradeInput = Console.ReadLine();
+                    if (int.TryParse(gradeInput, out int grade))
+                    {
+                        try
+                        {
+                            students.Add(new Student(name!, grade));
+                            System.Console.WriteLine("Student added successfully!");
+                        }
+                        catch (ArgumentException ex)
+                        {
+                            System.Console.WriteLine($"Error: {ex.Message}");
+                        }
+                    }
+                    else
+                    {
+                        System.Console.WriteLine("Invalid grade input. Please enter a number: ");
+                    }
                     break;
                 case "3":
                     var topStudents = students.Where(s => s.Grade > 80);
