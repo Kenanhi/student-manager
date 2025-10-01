@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Baku\\Desktop\\C# self\\OOP\\StudentManager\\StudentManager.csproj": {}
+    "C:\\Users\\Baku\\Desktop\\C# self\\oop\\StudentManager\\StudentManager.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Baku\\Desktop\\C# self\\OOP\\StudentManager\\StudentManager.csproj": {
+    "C:\\Users\\Baku\\Desktop\\C# self\\oop\\StudentManager\\StudentManager.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Baku\\Desktop\\C# self\\OOP\\StudentManager\\StudentManager.csproj",
+        "projectUniqueName": "C:\\Users\\Baku\\Desktop\\C# self\\oop\\StudentManager\\StudentManager.csproj",
         "projectName": "StudentManager",
-        "projectPath": "C:\\Users\\Baku\\Desktop\\C# self\\OOP\\StudentManager\\StudentManager.csproj",
+        "projectPath": "C:\\Users\\Baku\\Desktop\\C# self\\oop\\StudentManager\\StudentManager.csproj",
         "packagesPath": "C:\\Users\\Baku\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Baku\\Desktop\\C# self\\OOP\\StudentManager\\obj\\",
+        "outputPath": "C:\\Users\\Baku\\Desktop\\C# self\\oop\\StudentManager\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Baku\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -45,6 +45,12 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.4, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

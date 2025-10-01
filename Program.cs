@@ -1,4 +1,8 @@
-﻿class Program
+﻿using Newtonsoft.Json;
+using System.IO;
+
+
+class Program
 {
     static void Main()
     {
@@ -11,10 +15,16 @@
             new Student("Eve", 95)
 
         };
-       
+        if (File.Exists("students.json"))
+        {
+            string json = File.ReadAllText("students.json");
+            students = JsonConvert.DeserializeObject<List<Student>>(json);
+        }
+
+
         while (true)
         {
-            System.Console.WriteLine("1.List all students \n 2.Add a student. \n 3.Find top students \n 4. Show honors\n 5. Check failures\n 6. Group by grade\n 7. Exit");
+            System.Console.WriteLine(" 1.List all students \n 2.Add a student. \n 3.Find top students \n 4. Show honors\n 5. Check failures\n 6. Group by grade\n 7. Exit");
             string choice = Console.ReadLine();
             switch (choice)
             {
@@ -40,8 +50,8 @@
                 case "4":
                     var honors = students
                         .Where(s => s.Grade >= 90);
-                        
-                    foreach(var s in honors)
+
+                    foreach (var s in honors)
                     {
                         Console.WriteLine($"{s.Name} - {s.Grade}");
                     }
@@ -67,12 +77,14 @@
                     }
                     break;
                 case "7":
-                    System.Console.WriteLine("exiting...");
+                    string json = JsonConvert.SerializeObject(students, Formatting.Indented);
+                    File.WriteAllText("students.json", json);
+                    Console.WriteLine("Students saved. Exiting...");
+                    return;
 
-                    return;    
             }
         }
-        
+
 
     }
 }
